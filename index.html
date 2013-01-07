@@ -9,7 +9,7 @@ URL: https://code.google.com/p/io-2012-slides
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Code d'Armor</title>
+  <title>Nantes JUG</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
@@ -251,7 +251,7 @@ URL: https://code.google.com/p/io-2012-slides
         <pre class="prettyprint" data-lang="dart">
 // Point d'entrée d'une application Dart
 main() {
-  var group = "Code d'Armor";   // Déclaration et initialisation d'une variable
+  var group = "Nantes JUG";   // Déclaration et initialisation d'une variable
   sayHello(group);             // Appel de fonction
 }
 
@@ -275,11 +275,11 @@ class Coordonnees {
 }</pre>
        <pre class="prettyprint" data-lang="dart">
 main() {
-  var lannion = new Coordonnees();
-  lannion.latitude = 48;              // Utilisation du setter implicite
+  var nantes = new Coordonnees();
+  nantes.latitude = 48;              // Utilisation du setter implicite
 
-  assert(lannion.latitude == 48 );    // Utilisation du getter implicite
-  assert(lannion.longitude == null);  // Les attributs ont pour valeur null par défaut
+  assert(nantes.latitude == 48 );    // Utilisation du getter implicite
+  assert(nantes.longitude == null);  // Les attributs ont pour valeur null par défaut
 }</pre>
   </article>
 </slide>
@@ -556,7 +556,7 @@ query('#submitInfo').on.click.add((e) => submitData());</pre>
 &lt;script type='application/dart'&gt;
   void main() {
     HTMLElement element = document.getElementById('message');
-    element.innerHTML = 'Hello Lannion';
+    element.innerHTML = 'Hello Nantes';
   }
 &lt;/script&gt;
 </pre>
@@ -573,11 +573,11 @@ query('#submitInfo').on.click.add((e) => submitData());</pre>
   <article>
     <p>Ajout du script dart.js dans le code source</p>
      <pre class="prettyprint" data-lang="html">
-&lt;script type="application/dart" src="web/CodeDarmor.dart"&gt;&lt;/script&gt;
+&lt;script type="application/dart" src="web/nantesjug.dart"&gt;&lt;/script&gt;
 &lt;script src="https://dart.googlecode.com/svn/branches/bleeding_edge/dart/client/dart.js"&gt;&lt;/script&gt;</pre>
 <p>On le retrouve ainsi dans le DOM</p>
 <pre class="prettyprint" data-lang="html">
-&lt;script src="http://127.0.0.1:3030/Users/julienvey/dart/CodeDarmor/web/CodeDarmor.dart.js"&gt;&lt;/script&gt;
+&lt;script src="http://127.0.0.1:3030/Users/julienvey/dart/nantesjug/web/nantesjug.dart.js"&gt;&lt;/script&gt;
 &lt;script src="https://dart.googlecode.com/svn/branches/bleeding_edge/dart/client/dart.js"&gt;&lt;/script&gt;</pre>
 <p>Si le navigateur n'est pas capable d'exécuter du Dart, il utilise la version compilé en JavaScript avec dart2js</p>
   </article>
@@ -614,7 +614,7 @@ query('#submitInfo').on.click.add((e) => submitData());</pre>
 <slide class="segue nobackground">
     <aside class="gdbar"><img src="images/dart/dart_116_116.gif"></aside>
     <hgroup class="auto-fadein">
-      <h2 style="color:#515151">Dart Web Components</h2>
+      <h2 style="color:#515151">Dart Web UI</h2>
       <h3 style="color:#515151">Le framework web de Dart</h3>
     </hgroup>
   </slide>
@@ -733,7 +733,7 @@ someElement.appendChild(t.content.cloneNode());</pre>
 
 <slide>
   <hgroup>
-    <h2>Dart & les Web Components</h2>
+    <h2>Dart Web UI</h2>
     <h3>Le tooling</h3>
   </hgroup>
   <article>
@@ -748,7 +748,7 @@ someElement.appendChild(t.content.cloneNode());</pre>
 
 <slide>
   <hgroup>
-    <h2>Dart & les Web Components</h2>
+    <h2>Dart Web UI</h2>
     <h3>Model-Driven-View</h3>
   </hgroup>
   <article>
@@ -840,8 +840,9 @@ someElement.appendChild(t.content.cloneNode());</pre>
     <ul>
       <li>Ouverture du langage au public en Octobre 2011</li>
       <li>Sortie en version Milestone 1 en Octobre 2012</li>
+      <li>Milestone 2 en cours</li>
       <br>
-      <li>Editor, Web Components en constante amélioration</li>
+      <li>Editor, Web UI en constante amélioration</li>
       <br>
       <li>Premiers benchs très satisfaisant</li>
       <ul>
