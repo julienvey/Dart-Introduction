@@ -574,11 +574,11 @@ query('#submitInfo').on.click.add((e) => submitData());</pre>
     <p>Ajout du script dart.js dans le code source</p>
      <pre class="prettyprint" data-lang="html">
 &lt;script type="application/dart" src="web/nantesjug.dart"&gt;&lt;/script&gt;
-&lt;script src="https://dart.googlecode.com/svn/branches/bleeding_edge/dart/client/dart.js"&gt;&lt;/script&gt;</pre>
+&lt;script src="packages/browser/dart.js"&gt;&lt;/script&gt;</pre>
 <p>On le retrouve ainsi dans le DOM</p>
 <pre class="prettyprint" data-lang="html">
 &lt;script src="http://127.0.0.1:3030/Users/julienvey/dart/nantesjug/web/nantesjug.dart.js"&gt;&lt;/script&gt;
-&lt;script src="https://dart.googlecode.com/svn/branches/bleeding_edge/dart/client/dart.js"&gt;&lt;/script&gt;</pre>
+&lt;script src="packages/browser/dart.js"&gt;&lt;/script&gt;</pre>
 <p>Si le navigateur n'est pas capable d'exécuter du Dart, il utilise la version compilé en JavaScript avec dart2js</p>
   </article>
 </slide>
@@ -752,7 +752,7 @@ someElement.appendChild(t.content.cloneNode());</pre>
     <h3>Model-Driven-View</h3>
   </hgroup>
   <article>
-    <p>Outre les composants, Dart Web Component fournit également un mécanisme de databinding</p>
+    <p>Outre les composants, Dart Web UI fournit également un mécanisme de databinding</p>
     <ul>
       <li>Databinding unidirectionnel</li>
       <li>Databinding bidirectionnel</li>
@@ -771,7 +771,7 @@ someElement.appendChild(t.content.cloneNode());</pre>
     <pre class="prettyprint" data-lang="html">
 &lt;div&gt;
   Input:
-  &lt;input type="text" data-bind="value:str" placeholder="type something here"&gt; 
+  &lt;input type="text" bind-value="value:str" placeholder="type something here"&gt; 
   &lt;div&gt; Value: {{str}}&lt;/div&gt;
   &lt;div&gt; Length: {{str.length}}&lt;/div&gt;
 &lt;/div&gt;
@@ -790,8 +790,8 @@ someElement.appendChild(t.content.cloneNode());</pre>
   <article>
     <pre class="prettyprint" data-lang="html">
 &lt;div&gt;
-  &lt;div&gt; Input1: &lt;input type="text" data-bind="value:str1"&gt;&lt;/div&gt;
-  &lt;div&gt; Input2: &lt;input type="text" data-bind="value:str2"&gt;&lt;/div&gt;
+  &lt;div&gt; Input1: &lt;input type="text" bind-value="value:str1"&gt;&lt;/div&gt;
+  &lt;div&gt; Input2: &lt;input type="text" bind-value="value:str2"&gt;&lt;/div&gt;
   &lt;template instantiate="if str1 == str2"&gt;
     &lt;div&gt;They match!&lt;/div&gt;
   &lt;/template&gt;
@@ -812,7 +812,7 @@ someElement.appendChild(t.content.cloneNode());</pre>
   <article>
     <pre class="prettyprint" data-lang="html">
 &lt;div&gt;
-  &lt;button data-action="click:increment"&gt;Click me&lt;/button&gt;
+  &lt;button on-click="click:increment"&gt;Click me&lt;/button&gt;
   &lt;span&gt;(click count: {{count}})&lt;/span&gt;
 &lt;/div&gt;
 &lt;script type="application/dart"&gt;
